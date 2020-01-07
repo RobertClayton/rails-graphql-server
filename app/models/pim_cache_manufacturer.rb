@@ -1,0 +1,2 @@
+class PimCacheManufacturer < ApplicationRecord
+end
