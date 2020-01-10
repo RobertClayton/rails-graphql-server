@@ -9,3 +9,6 @@
 #### Additional
 Ruby 2.7 is throwing depreciation warnings for gems not yet updated. If you want to silence these run in console:
 `export RUBYOPT='-W:no-deprecated -W:no-experimental'`
+
+#### Local testing
+`http://localhost:3000/graphiql`

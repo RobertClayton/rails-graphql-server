@@ -4,16 +4,20 @@ module Types
     field :status, String, null: true
     field :slug, String, null: true
 
+    def json_value(value)
+      JSON.parse(object)['values'][value].first['data']
+    end
+
     def label
-      JSON.parse(object)["values"]['label'].first['data']
+      json_value('label')
     end
 
     def status
-      JSON.parse(object)["values"]['status'].first['data']
+      json_value('status')
     end
 
     def slug
-      JSON.parse(object)["values"]['slug'].first['data']
+      json_value('slug')
     end
   end
 end
